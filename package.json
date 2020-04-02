@@ -1,5 +1,5 @@
 {
-	"name": "nuxt-meituan",
+	"name": "nuxt-website",
 	"version": "1.0.0",
 	"description": "My majestic Nuxt.js project",
 	"author": "yyeexin",
@@ -8,7 +8,7 @@
 		"dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server --exec babel-node",
 		"build": "nuxt build",
 		"start": "nuxt start",
-		"prd": "pm2 start npm -- run start ",
+		"prd": "pm2 start nuxt-website -- cross-env NODE_ENV=production PORT=3002 run start",
 		"generate": "nuxt generate",
 		"upgrade": "yarn upgrade-interactive --ignore-engines",
 		"push": "git add . && git commit -m \"commit\" && git pull && git push"
