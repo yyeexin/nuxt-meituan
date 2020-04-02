@@ -60,5 +60,8 @@ module.exports = {
 		 ** You can extend webpack config here
 		 */
 		extend(config, ctx) {}
+	},
+	server: {
+		port: 3003 // default: 3000
 	}
 }
