@@ -2,8 +2,7 @@ module.exports = {
 	apps: [
 		{
 			name: 'nuxt-website',
-			script: 'npm',
-			args: 'run start',
+			script: 'server/index.js',
 			watch: false,
 			env_production: {
 				PORT: 3003,

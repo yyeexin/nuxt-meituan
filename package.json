@@ -5,12 +5,11 @@
 	"author": "yyeexin",
 	"private": true,
 	"scripts": {
-		"dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server --exec babel-node",
-		"build": "nuxt build",
-		"start": "nuxt start",
-		"prd": "pm2 startOrRestart ecosystem.config.js --env production",
+		"dev": "cross-env NODE_ENV=development PORT=3003 nodemon server/index.js --watch server",
+		"start": "cross-env NODE_ENV=production PORT=3003 node server/index.js",
 		"generate": "nuxt generate",
-		"upgrade": "yarn upgrade-interactive --ignore-engines",
+		"build": "nuxt build",
+		"prd": "pm2 startOrRestart ecosystem.config.js --env production",
 		"push": "git add . && git commit -m \"commit\" && git pull && git push"
 	},
 	"dependencies": {
