@@ -8,6 +8,9 @@ const app = new Koa()
 const config = require('../nuxt.config.js')
 config.dev = app.env !== 'production'
 
+// 注册路由
+require('./routes')(app)
+
 async function start() {
 	// Instantiate nuxt.js
 	const nuxt = new Nuxt(config)

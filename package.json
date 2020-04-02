@@ -13,11 +13,13 @@
 		"push": "git add . && git commit -m \"commit\" && git pull && git push"
 	},
 	"dependencies": {
+		"@koa/router": "^8.0.8",
 		"@nuxtjs/axios": "^5.3.6",
 		"cross-env": "^5.2.0",
 		"element-ui": "^2.4.11",
 		"koa": "^2.6.2",
-		"nuxt": "^2.0.0"
+		"nuxt": "^2.0.0",
+		"require-directory": "^2.1.1"
 	},
 	"devDependencies": {
 		"@babel/node": "^7.8.4",

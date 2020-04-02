@@ -18,10 +18,14 @@ import Logo from '~/components/Logo.vue'
 export default {
 	components: {
 		Logo
+	},
+	mounted() {
+		this.$axios.get('/user/122').then(res => {
+			console.log(res)
+		})
 	}
 }
 </script>
-
 <style>
 .container {
 	margin: 0 auto;
