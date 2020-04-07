@@ -1,8 +1,8 @@
 <template>
 	<div class="container">
 		<div>
-			<logo />
-			<h1 class="title">123456</h1>
+			<!-- <logo /> -->
+			<!-- <h1 class="title">123456</h1> -->
 			<h2 class="subtitle">My majestic Nuxt.js project</h2>
 			<div class="links">
 				<a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
@@ -14,16 +14,19 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
-
+import { mapState, mapGetters, mapMutations, mapActions } from 'vuex'
 export default {
 	components: {
 		Logo
 	},
 	mounted() {
 		this.$axios.get('/user/122').then(res => {
-			console.log(res)
+			// console.log(res)
 		})
-	}
+		console.log(this.$store.getters.getState)
+	},
+	computed: {},
+	methods: {}
 }
 </script>
 <style>

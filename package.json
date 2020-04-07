@@ -10,14 +10,19 @@
 		"generate": "nuxt generate",
 		"build": "nuxt build",
 		"prd": "pm2 startOrRestart ecosystem.config.js --env production",
-		"push": "git add . && git commit -m \"commit\" && git pull && git push"
+		"push": "git add . && git commit -m \"commit\" && git pull && git push",
+		"update": "yarn upgrade-interactive --ignore-engines"
 	},
 	"dependencies": {
 		"@koa/router": "^8.0.8",
 		"@nuxtjs/axios": "^5.3.6",
+		"cookieparser": "^0.1.0",
 		"cross-env": "^5.2.0",
 		"element-ui": "^2.4.11",
+		"js-cookie": "^2.2.1",
+		"jsonwebtoken": "^8.5.1",
 		"koa": "^2.6.2",
+		"koa-body": "^4.1.1",
 		"nuxt": "^2.0.0",
 		"require-directory": "^2.1.1"
 	},

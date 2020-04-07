@@ -34,11 +34,13 @@
 </template>
 <script>
 import MenuItem from '@/components/MenuItem'
+import Cookies from 'js-cookie'
 export default {
 	name: 'Admin',
 	components: {
 		MenuItem
 	},
+	middleware: 'authenticated',
 	data() {
 		return {
 			isCollapse: false,
@@ -61,10 +63,6 @@ export default {
 		this.activePath = window.sessionStorage.getItem('activePath') || ''
 	},
 	methods: {
-		logout() {
-			window.sessionStorage.clear()
-			this.$router.push('/login')
-		},
 		toggleMenu() {
 			this.isCollapse = !this.isCollapse
 		},
@@ -72,6 +70,11 @@ export default {
 			if (!index) return
 			this.activePath = index
 			window.sessionStorage.setItem('activePath', index)
+		},
+		async logout() {
+			const { data } = await this.$axios.get('/logout')
+			this.$store.commit('setAuth', null)
+			this.$router.push('/login')
 		}
 	}
 }
