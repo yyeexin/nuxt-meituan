@@ -9,9 +9,8 @@ export default {
 			const { token } = cookie
 			try {
 				jwt.verify(token, 'secret_word', (error, result) => {
-					if (error) commit('setAuth', null)
+					if (error) auth = null
 					auth = result
-					commit('setAuth', auth)
 				})
 			} catch (err) {
 				// No valid cookie found

@@ -10,6 +10,9 @@ app.use(koaBody())
 // 注册路由
 require('./routes')(app)
 
+// 连接数据库
+require('./models')
+
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')
 config.dev = app.env !== 'production'

@@ -72,7 +72,7 @@ export default {
 			window.sessionStorage.setItem('activePath', index)
 		},
 		async logout() {
-			const { data } = await this.$axios.get('/logout')
+			await this.$axios.get('/logout')
 			this.$store.commit('setAuth', null)
 			this.$router.push('/login')
 		}
