@@ -1,0 +1,10 @@
+{
+	"verbose": false,
+	"watch": ["server"],
+	"ext": "js,json",
+	"exec": "node server/index.js",
+	"env": {
+		"NODE_ENV": "development",
+		"PORT": 3003
+	}
+}
