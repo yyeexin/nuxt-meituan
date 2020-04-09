@@ -1,3 +1,4 @@
+const consola = require('consola')
 const mongoose = require('mongoose')
 const env = process.env.NODE_ENV || 'development'
 const DBConfig = {
@@ -29,7 +30,9 @@ const { uris, options } = DBConfig[env]
 mongoose.connect(uris, options)
 
 const db = mongoose.connection
-db.on('error', console.error.bind(console, 'connection error:'))
+db.on('error', function(error) {
+	consola.error(error)
+})
 db.once('open', function() {
-	console.log(`数据库${uris} 连接成功`)
+	consola.success(`数据库${uris} 连接成功`)
 })

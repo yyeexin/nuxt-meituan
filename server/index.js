@@ -1,9 +1,16 @@
 const Koa = require('koa')
 const koaBody = require('koa-body')
+const onerror = require('koa-onerror')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 
 const app = new Koa()
+
+app.on('error', (err, ctx) => {
+	consola.error(err)
+})
+
+onerror(app)
 
 app.use(koaBody())
 

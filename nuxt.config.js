@@ -64,6 +64,10 @@ module.exports = {
 		 */
 		extend(config, ctx) {}
 	},
+	router: {
+		//在每页渲染前运行中间件
+		middleware: 'user-agent'
+	},
 	server: {
 		port: 3003 // default: 3000
 	}

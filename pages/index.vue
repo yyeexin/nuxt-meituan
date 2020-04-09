@@ -19,12 +19,7 @@ export default {
 	components: {
 		Logo
 	},
-	mounted() {
-		this.$axios.get('/user/122').then(res => {
-			// console.log(res)
-		})
-		console.log(this.$store.getters.getState)
-	},
+	mounted() {},
 	computed: {},
 	methods: {}
 }
