@@ -5,9 +5,9 @@ const DBConfig = {
 	development: {
 		uris: 'mongodb://118.89.36.20:27017/dev-nuxt-website',
 		options: {
-			user: 'yyeexin',
-			pass: 'Ayecin2018.',
-			authSource: 'admin',
+			// user: 'yyeexin',
+			// pass: 'Ayecin2018.',
+			// authSource: 'admin',
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
 			useCreateIndex: true
@@ -16,9 +16,9 @@ const DBConfig = {
 	production: {
 		uris: 'mongodb://118.89.36.20:27017/prod-nuxt-website',
 		options: {
-			user: 'yyeexin',
-			pass: 'Ayecin2018.',
-			authSource: 'admin',
+			// user: 'yyeexin',
+			// pass: 'Ayecin2018.',
+			// authSource: 'admin',
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
 			useCreateIndex: true
