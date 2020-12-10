@@ -9,7 +9,7 @@
 		"start": "cross-env NODE_ENV=production PORT=3003 node server/index.js",
 		"generate": "nuxt generate",
 		"build": "nuxt build",
-		"prd": "pm2 startOrRestart ecosystem.config.js --env production",
+		"prd": "sudo pm2 startOrRestart ecosystem.config.js --env production",
 		"push": "git add . && git commit -m \"commit\" && git pull && git push",
 		"update": "yarn upgrade-interactive --ignore-engines"
 	},

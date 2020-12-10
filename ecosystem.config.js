@@ -1,7 +1,7 @@
 module.exports = {
 	apps: [
 		{
-			name: 'nuxt-website',
+			name: 'my-home-page',
 			script: 'server/index.js',
 			watch: false,
 			env_production: {
