@@ -7,7 +7,7 @@ export default {
 		return {}
 	},
 	mounted() {},
-	methods: {}
+	methods: {},
 }
 </script>
 <style lang='scss' scoped>

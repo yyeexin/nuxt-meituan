@@ -1,6 +1,6 @@
 <template>
 	<el-container>
-		<el-aside :width="isCollapse ? '64px':'200px'">
+		<el-aside :width="isCollapse ? '64px' : '200px'">
 			<div class="menu-header">
 				<span v-if="!isCollapse">电商后台管理系统</span>
 			</div>
@@ -22,9 +22,16 @@
 			<el-header>
 				<i
 					@click="toggleMenu"
-					:class="['toggle-button',isCollapse ? 'el-icon-d-arrow-right' : 'el-icon-d-arrow-left']"
+					:class="[
+						'toggle-button',
+						isCollapse
+							? 'el-icon-d-arrow-right'
+							: 'el-icon-d-arrow-left',
+					]"
 				></i>
-				<el-button type="info" @click="logout" size="mini">退出</el-button>
+				<el-button type="info" @click="logout" size="mini"
+					>退出</el-button
+				>
 			</el-header>
 			<el-main>
 				<nuxt-child />
@@ -38,7 +45,7 @@ import Cookies from 'js-cookie'
 export default {
 	name: 'Admin',
 	components: {
-		MenuItem
+		MenuItem,
 	},
 	middleware: 'authenticated',
 	data() {
@@ -49,14 +56,14 @@ export default {
 				{
 					icon: 'el-icon-s-custom',
 					name: '用户管理',
-					path: '/admin/user'
+					path: '/admin/user',
 				},
 				{
 					icon: 'el-icon-s-comment',
 					name: '留言管理',
-					path: '/admin/message'
-				}
-			]
+					path: '/admin/message',
+				},
+			],
 		}
 	},
 	mounted() {
@@ -75,8 +82,8 @@ export default {
 			await this.$axios.get('/logout')
 			this.$store.commit('setAuth', null)
 			this.$router.push('/login')
-		}
-	}
+		},
+	},
 }
 </script>
 <style lang="scss">

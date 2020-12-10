@@ -6,10 +6,15 @@
 					<el-input v-model="form.username"></el-input>
 				</el-form-item>
 				<el-form-item label="密码" prop="password">
-					<el-input v-model="form.password" type="password"></el-input>
+					<el-input
+						v-model="form.password"
+						type="password"
+					></el-input>
 				</el-form-item>
 				<el-form-item>
-					<el-button type="primary" @click="onSubmit" size="mini">立即登录</el-button>
+					<el-button type="primary" @click="onSubmit" size="mini"
+						>立即登录</el-button
+					>
 				</el-form-item>
 			</el-form>
 		</el-card>
@@ -24,29 +29,29 @@ export default {
 		return {
 			form: {
 				username: '',
-				password: ''
+				password: '',
 			},
 			rules: {
 				username: [
 					{
 						required: true,
 						message: '账号不能为空',
-						trigger: 'change'
-					}
+						trigger: 'change',
+					},
 				],
 				password: [
 					{
 						required: true,
 						message: '密码不能为空',
-						trigger: 'change'
-					}
-				]
-			}
+						trigger: 'change',
+					},
+				],
+			},
 		}
 	},
 	methods: {
 		async onSubmit() {
-			this.$refs.form.validate(async valid => {
+			this.$refs.form.validate(async (valid) => {
 				if (!valid) return
 				const { data: res } = await this.$axios.post(
 					'/login',
@@ -56,7 +61,7 @@ export default {
 				if (status === 200) {
 					this.$message({
 						message,
-						type: success ? 'success' : 'error'
+						type: success ? 'success' : 'error',
 					})
 					if (success) {
 						this.$store.commit('setAuth', data)
@@ -64,8 +69,8 @@ export default {
 					}
 				}
 			})
-		}
-	}
+		},
+	},
 }
 </script>
 <style lang="scss" scoped>

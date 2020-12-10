@@ -9,15 +9,15 @@ module.exports = {
 			{ charset: 'utf-8' },
 			{
 				name: 'viewport',
-				content: 'width=device-width, initial-scale=1',
+				content: 'width=device-width, initial-scale=1'
 			},
 			{
 				hid: 'description',
 				name: 'description',
-				content: process.env.npm_package_description || '',
-			},
+				content: process.env.npm_package_description || ''
+			}
 		],
-		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
 	},
 	/*
 	 ** Customize the progress-bar color
@@ -30,7 +30,7 @@ module.exports = {
 		'~assets/css/normalize.css',
 		'element-ui/lib/theme-chalk/reset.css',
 		'element-ui/lib/theme-chalk/index.css',
-		'~assets/css/main.css',
+		'~assets/css/main.css'
 	],
 	/*
 	 ** Plugins to load before mounting the App
@@ -45,14 +45,14 @@ module.exports = {
 	 */
 	modules: [
 		// Doc: https://axios.nuxtjs.org/usage
-		'@nuxtjs/axios',
+		'@nuxtjs/axios'
 	],
 	/*
 	 ** Axios module configuration
 	 ** See https://axios.nuxtjs.org/options
 	 */
 	axios: {
-		browserBaseURL: '/',
+		browserBaseURL: '/'
 	},
 	/*
 	 ** Build configuration
@@ -62,14 +62,14 @@ module.exports = {
 		/*
 		 ** You can extend webpack config here
 		 */
-		extend(config, ctx) {},
+		extend(config, ctx) {}
 	},
 	router: {
 		//在每页渲染前运行中间件
-		middleware: 'user-agent',
+		middleware: 'user-agent'
 	},
 	server: {
-		port: 3003, // default: 3000
+		port: 3003 // default: 3000
 	},
-	telemetry: false,
+	telemetry: false
 }
